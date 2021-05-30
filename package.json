@@ -11,7 +11,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "compile:sass": "sass ./src/styles/sass/main.scss:./src/styles/global.css .src/components/navbar.scss:src/components/navbar.module.css",
+    "watch": "sass ./src/styles/sass/main.scss:./src/styles/global.css ./src/components/navbar.scss:./src/components/navbar.module.css -w"
   },
   "dependencies": {
     "gatsby": "^3.4.1",
@@ -19,7 +21,8 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sass": "^1.34.0"
   },
   "repository": {
     "type": "git",

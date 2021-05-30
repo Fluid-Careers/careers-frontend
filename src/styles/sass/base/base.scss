@@ -1,0 +1,35 @@
+/* basic reset to help overwrite browser CSS */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    //border: 1px solid #000000;
+}
+
+html {
+    /* this is a percent of the root font size (16px), aiming for 10px */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    background-color: $color-tertiary-dark;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+a {
+    font-size: 75%;
+    text-decoration: none;
+    color: $color-grey-logo;
+
+    &:visited {
+        color: $color-grey-logo;
+    }
+}
+
+li {
+    list-style: none;
+}

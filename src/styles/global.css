@@ -1,0 +1,250 @@
+/*
+0 - 600: Phone
+600 - 900: Tablet Portrait
+900 - 1200: Tablet Landscape
+1200 - 1800: Desktop
+1800 + : Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-portrait
+- tab-landscape
+- big-desktop
+
+ORDER: Base + typographgy > general layout + grid > page layout > components
+*/
+.heading-primary {
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+}
+
+.heading-secondary {
+  color: #0e1a3c;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.heading-tertiary {
+  color: #0e1a3c;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.5rem;
+  color: #0e1a3c;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border-color: #000;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
+}
+.btn--blue {
+  background-color: #2b6fad;
+  color: #fff;
+}
+.btn--blue::after {
+  background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green::after {
+  background-color: #55c57a;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  /* this makes the initial state of the animation apply to the element from page load */
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #55c57a;
+  padding: 0.3rem;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+.header__logo-box {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  height: 7rem;
+}
+.header .cta {
+  height: 75rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+.header .cta__heading {
+  display: flex;
+  justify-content: center;
+}
+.header .cta__searchbar {
+  align-self: center;
+  display: flex;
+  align-content: center;
+  padding: 0.5rem;
+  width: 90%;
+  max-width: 1000px;
+}
+.header .cta__search-input {
+  flex-grow: 1;
+}
+
+.home-header {
+  background-image: linear-gradient(to right bottom, rgba(43, 111, 173, 0.8), rgba(14, 26, 60, 0.8)), url(../images/homepage_cta.jpeg);
+  background-size: cover;
+  background-position: 0% 70%;
+}
+
+.main .how-it-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+.main .how-it-works__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5rem 1rem;
+}
+.main .how-it-works__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem 0;
+}
+.main .how-it-works__icon {
+  margin: 0 0 5rem;
+}
+.main .how-it-works svg {
+  height: 100px;
+}
+.main .how-it-works__content-item {
+  width: 300px;
+  text-align: center;
+}
+.main .how-it-works__content-heading {
+  margin-bottom: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5rem 1rem;
+}
+
+.footer {
+  background-color: #0e1a3c;
+  height: 100px;
+}
+
+/* basic reset to help overwrite browser CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* this is a percent of the root font size (16px), aiming for 10px */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  background-color: #0e1a3c;
+  font-family: "Gothic A1", sans-serif;
+}
+
+a {
+  font-size: 75%;
+  text-decoration: none;
+  color: #B7BFC8;
+}
+a:visited {
+  color: #B7BFC8;
+}
+
+li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=global.css.map */

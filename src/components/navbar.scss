@@ -1,0 +1,42 @@
+@import '../styles/sass/variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-tertiary-dark;
+    opacity: 0.8;
+}
+
+.checkbox{
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+.background {
+    display: none;
+}
+
+.nav {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    font-family: 'Gothic A1', sans-serif;
+    list-style: none;
+    font-size: 2.5rem;
+    margin: 0 2rem;
+}
+
+.login-button {
+    border-left: solid 1px $color-grey-logo;
+}

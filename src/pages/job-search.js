@@ -1,4 +1,5 @@
 import React from "react"
+import JobListing from "../components/joblisting"
 import NavBar from "../components/navbar"
 
 export default function JobSearch() {
@@ -11,6 +12,7 @@ export default function JobSearch() {
             <section>
                 <div className="content"></div>
             </section>
+            <JobListing />
         </main>
     </div>
     )

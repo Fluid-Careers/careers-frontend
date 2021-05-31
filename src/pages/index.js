@@ -1,6 +1,5 @@
 import React from "react"
 import NavBar from "../components/navbar"
-import FooterComponent from "../components/footer"
 
 export default function Home() {
   return (

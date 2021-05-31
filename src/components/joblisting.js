@@ -6,8 +6,6 @@ function JobListing() {
     return (
         <section className={listing}>
             <ListingContainer title="Manager of Things" company="Googs" salary="100,000" location="New Yoek" time="1 min ago" />
-            <ListingContainer />
-            <ListingContainer />
         </section>
     )
 }

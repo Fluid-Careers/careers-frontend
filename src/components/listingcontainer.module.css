@@ -1,23 +1,25 @@
 .container {
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
 
     border: solid 1px lightgrey;
     border-radius: 3px;
     box-shadow: 1px 1px 3px 2px lightgrey;
     height: 10rem;
-    width: 80rem;
+    width: 80%;
     margin: 3rem;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    border: solid 1px black;
+    min-width: 20rem;
+    /* border: solid 1px black; */
 }
 
 .logo {
-
+    width: 10rem;
 }
 
 .headerContent {
@@ -27,7 +29,7 @@
 }
 
 .title {
-
+    font-size: 18px;
 }
 
 .company {
@@ -58,4 +60,51 @@
 
 .apply {
 
+}
+
+.saveCheckbox {
+    /* display: none; */
+}
+
+.saveLabel {
+
+}
+
+.apply {
+
+}
+
+input[type=radio] {
+    /* display: none; */
+}
+
+input[type=radio] + label {
+    color: #ccc;
+    width: 2rem;
+  }
+
+  input#saveButton + label {
+    color: #f00;
+    width: 2rem;
+  }
+
+
+  input[type=radio] + label > .unsave {
+    color: #f00;
+    font-style: normal;
+  }
+
+  input[type=radio]:checked + label > .save {
+    color: #f00;
+    font-style: italic;
+  } 
+
+  input[type=radio]:checked + label > .unsave {
+    color: #f00;
+    font-style: normal;
+  } 
+
+.unsave {
+    width: 3rem;
+    display: none;
 }

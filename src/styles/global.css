@@ -40,6 +40,10 @@ p {
   color: #0e1a3c;
 }
 
+h3 {
+  font-size: 48px;
+}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;

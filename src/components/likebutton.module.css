@@ -1,0 +1,27 @@
+.label {
+
+}
+
+.saveCheckbox {
+    display: none;
+}
+
+.label input[type=checkbox] + svg  {
+    display: flex;
+    color: #f00;
+    width: 2rem;
+}
+
+.label input[type=checkbox] + svg + svg  {
+    display: none;
+}
+
+.label input[type=checkbox]:checked + svg  {
+    display: none;
+}
+
+.label input[type=checkbox]:checked + svg + svg  {
+    display: flex;
+    color: #f00;
+    width: 2rem;
+}

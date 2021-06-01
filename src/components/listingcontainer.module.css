@@ -62,48 +62,6 @@
 
 }
 
-.saveCheckbox {
-    /* display: none; */
-}
-
-.saveLabel {
-
-}
-
-.apply {
-
-}
-
-input[type=radio] {
-    /* display: none; */
-}
-
-input[type=radio] + label {
-    color: #ccc;
-    width: 2rem;
-  }
-
-  input#saveButton + label {
-    color: #f00;
-    width: 2rem;
-  }
-
-
-  input[type=radio] + label > .unsave {
-    color: #f00;
-    font-style: normal;
-  }
-
-  input[type=radio]:checked + label > .save {
-    color: #f00;
-    font-style: italic;
-  } 
-
-  input[type=radio]:checked + label > .unsave {
-    color: #f00;
-    font-style: normal;
-  } 
-
 .unsave {
     width: 3rem;
     display: none;

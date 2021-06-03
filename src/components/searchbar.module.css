@@ -1,0 +1,37 @@
+.searchbar {
+    align-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    height: 7rem;
+    margin: 5rem 0;
+}
+
+.search-inputs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title-input {
+    width: 50%;
+    padding-left: 2rem;
+    font-size: 1.75rem;
+}
+
+.location-input {
+    margin-left: 1rem;
+    width: 50%;
+    padding-left: 2rem;
+    font-size: 1.75rem;
+}
+
+.search-button {
+    margin-left: 1rem;
+    width: 12rem;
+    padding: 2.4rem 2rem;
+    font-size: 1.75rem;
+}

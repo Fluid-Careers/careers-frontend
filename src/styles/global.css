@@ -40,16 +40,20 @@ p {
   color: #0e1a3c;
 }
 
+h3 {
+  font-size: 48px;
+}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem;
   display: inline-block;
   border-radius: 0.25rem;
   border-color: #000;
   transition: all 0.2s;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.75rem;
   border: none;
   cursor: pointer;
 }
@@ -155,6 +159,9 @@ p {
 .header .cta__search-input {
   flex-grow: 1;
 }
+.header .cta__button {
+  padding: 1.5rem 4rem;
+}
 
 .home-header {
   background-image: linear-gradient(to right bottom, rgba(43, 111, 173, 0.8), rgba(14, 26, 60, 0.8)), url(../images/homepage_cta.jpeg);
@@ -211,6 +218,11 @@ section {
 .footer {
   background-color: #0e1a3c;
   height: 100px;
+}
+
+.margined-content {
+  width: 80%;
+  align-self: center;
 }
 
 /* basic reset to help overwrite browser CSS */

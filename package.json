@@ -16,6 +16,8 @@
     "watch": "sass ./src/styles/sass/main.scss:./src/styles/global.css ./src/components/navbar.scss:./src/components/navbar.module.css -w"
   },
   "dependencies": {
+    "@reach/router": "^1.3.4",
+    "auth0-js": "^9.16.2",
     "gatsby": "^3.4.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

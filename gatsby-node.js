@@ -1,5 +1,42 @@
 //  tap into Gatsby's server-side build pipeline and customize it with this file
 
+// example of creating pages from templates
+exports.createPages = ( { actions: { createPage }}) => {
+  
+  // static page, no data
+  createPage({
+    path: '/no-data/',
+    component: require.resolve("./src/templates/no-data"),
+  })
+
+  // data provided here by using context
+  createPage({
+    path: '/data-from-context/',
+    component: require.resolve("./src/templates/data-from-context"),
+    context: {
+      title: 'Super Sick Title',
+      content: "<p>This is the page content</p>"
+    }
+  })
+
+  // data provided from json
+  const listings = require('./data/listings.json')
+  listings.forEach(listing =>{
+    createPage({
+      path: `/listing/${listing.id}/`,
+      component: require.resolve('./src/templates/listing.js'),
+      context: {
+        title: listing.title,
+        company: listing.company,
+        salary: listing.salary,
+        location: listing.location,
+        time: listing.time,
+        id: listing.id,
+      }
+    })
+  })
+}
+
 // Override the Gatsby API “onCreatePage”. This is
 // called after every page is created.
 exports.onCreatePage = async ({ page, actions }) => {

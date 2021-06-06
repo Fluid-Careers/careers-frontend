@@ -1,8 +1,14 @@
 import React, { useState } from "react"
+import axios from "axios"
 import ListingContainer from "./listingcontainer"
 import { listing } from "./joblisting.module.css"
 
 function JobListing() {
+
+    axios.get("http://localhost:8084/api/jobs/listings").then((repos) => {
+        const listings = repos.data;
+        console.log(listings)
+      });
 
     /* static array for testing */
     const details = [

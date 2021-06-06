@@ -1,9 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
 import logo from './fluid_careers_logo.png'
+import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { navbar, checkbox, button, background, nav, list, item, loginButton } from "./navbar.module.css"
 
+function LoginButton() {
+    if(isAuthenticated()) {
+        return <LoggedIn />
+    }
+    return <LoggedOut />
+}
+
+const LoggedIn = () => <a href="#login" className="btn" onClick={e => { logout(); e.preventDefault();}}>Logout</a>
+
+const LoggedOut = () => <a href="#login" className="btn" onClick={e => { login(); e.preventDefault();}}>Login</a>
+
 function NavBar() {
+
     return (
         <div className={navbar}>
             <div className="header__logo-box">
@@ -12,7 +25,7 @@ function NavBar() {
             </div>
             <div className="navigation">
                 <input type="checkbox" className={checkbox} id="navi-toggle"/>
-                <label for="navi-toggle" className={button}>
+                <label htmlFor="navi-toggle" className={button}>
                     <span className="navigation__icon">&nbsp;</span>
                 </label>
                 <div className={background}>&nbsp;</div>
@@ -25,7 +38,7 @@ function NavBar() {
                         <li className={item}><Link to="/resources/">Resources</Link></li>
                         <li className={item}><Link to="/contact/">Contact</Link></li>
                     </ul>
-                    <div className={loginButton}><a href="#login" className="btn">Login</a></div>
+                    <div className={loginButton}><LoginButton /></div>
                 </nav>
             </div>
         </div>

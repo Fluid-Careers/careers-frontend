@@ -6,7 +6,8 @@ import { listing } from "./joblisting.module.css"
 function JobListing() {
     const [listings, setListings] = useState([])
 
-    // example API call
+    // example API call (empty array is the variables that the hook depends on
+    // - if it changes, it will run again)
     useEffect(async() => {
         const result = await axios("http://localhost:8084/api/job-listings",); 
         setListings(result.data)

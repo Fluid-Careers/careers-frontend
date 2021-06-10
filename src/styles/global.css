@@ -40,8 +40,12 @@ p {
   color: #0e1a3c;
 }
 
+h1 {
+  font-size: 6rem;
+}
+
 h3 {
-  font-size: 48px;
+  font-size: 4.8rem;
 }
 
 .btn, .btn:link, .btn:visited {

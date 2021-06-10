@@ -1,0 +1,14 @@
+.inputField {
+    width: 35rem;
+    height: 4rem;
+}
+
+.fieldDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.labelStyle {
+    font-size: 1.6rem;
+}

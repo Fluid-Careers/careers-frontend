@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import ListingContainer from "./listingcontainer"
+import ListingContainer from "../ListingContainer/listingcontainer"
 import { listing } from "./joblisting.module.css"
 
 function JobListing() {

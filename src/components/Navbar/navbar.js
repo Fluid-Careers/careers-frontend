@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import logo from './fluid_careers_logo.png'
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
+import { login, logout, isAuthenticated, getProfile } from "../../utils/auth"
 import { navbar, checkbox, button, background, nav, list, item, loginButton } from "./navbar.module.css"
 
 function LoginButton() {

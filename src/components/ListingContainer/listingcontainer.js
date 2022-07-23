@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import LikeButton from './likebutton'
+import LikeButton from '../LikeButton/likebutton'
 import icon from "../images/favicon.ico"
 import { container, header, logo, headerContent, title, company, salary, location, time, actions, apply} from "./listingcontainer.module.css"
 
